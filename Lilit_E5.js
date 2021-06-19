@@ -60,4 +60,55 @@ function changeSymbolof(string,changeSymbol, symbol) {
 
 console.log(changeSymbolof(string,changeSymbol,symbol))
 
+// Üb 4
+let arr = [];
+let arrLength = prompt("Enter arrray's length.")
+for(let i = 0; i < arrLength; i++ ){
+    arr.push(prompt("Given an array of number."))
+}
+function findUniqueElements (arr) {
+    let result = [];
+    for(let i = 0; i < arr.length ; i++){
+        let bul = true;
+        for(let j = i+1; j<arr.length; j++){
+          if(arr[i] === arr[j]){
+          bul = false
+          break;
+          }
+    }
+    if (bul){
+result.push(arr[i])
+}
+    }
+return result
+}
+findUniqueElements(arr)
+
+
+
+//Üb 3
+let sentence = prompt("Enter a sentence.");
+let string = prompt("Enter a string.")
+function remove (s, st) {
+let result =  " ";
+
+    for(let i = 0; i < s.length ; i++){
+    	let subFound = true;
+
+    	for (let j = 0; j < st.length; j++){
+    		if(s[i+j] !==st[j]){
+    			subFound = false
+    			result = result + s[i]
+    			break
+    		}
+    	}
+       if(subFound === true){
+       	 i = i+st.length-1
+       }
+    
+    }
+    return result
+}
+remove (sentence, string)
+
 
