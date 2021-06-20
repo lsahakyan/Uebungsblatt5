@@ -1,17 +1,30 @@
 
 //Üb 1
-function numbersArray (arr) {
-let oddNumbersArray = []
-let evenNumbersArray = []
-	for (let i = 0; i<arr.length; i++) {
-		if(arr[i]%2 === 0) {
-			oddNumbersArray.push(arr[i])
+let word = prompt("Enter a word");
+let length = +prompt ("Enter a number")
+let arr = [];
+for (let i = 0; i < length; i++){
+    arr.push(prompt("Enter anagrams"))
+}
+function wordreSelect( w, a) {
+    let result;
+    for(let i = 0; i < a.length; i++ ){
+        if(w.length === a[i].length){
+            for(let j = 0; j < a[i].length; j++){
+                for(let k=0; k < w.length; k++){
+                    if(a[i][j] === w[k]){
+                        result =a[i];
+                        break;
+                    }
+                }
+                  break
+            }
+        }
+    }
+    return result
+}
 
-		} else { evenNumbersArray.push(arr[i])
-      	}
-	}			
-		return {evenNumbersArray, oddNumbersArray}
-}		
+wordreSelect(word,arr);	
 
 //Üb 2
 let word = prompt("Please enter a word")
